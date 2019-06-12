@@ -3,6 +3,7 @@ export interface Pattern {
     name: string;
     company: string;
     imageUrl: string;
+    category: string;
     supplies: string[];
-    measurements: string[];
+    price: number;
 }
