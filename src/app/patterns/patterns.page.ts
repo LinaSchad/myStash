@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Pattern} from './pattern.model';
+import {PatternsService} from './patterns.service';
 
 @Component({
     selector: 'app-patterns',
@@ -9,10 +10,11 @@ import {Pattern} from './pattern.model';
 export class PatternsPage implements OnInit {
     patterns: Pattern[];
 
-    constructor() {
+    constructor(private patternsService: PatternsService) {
     }
 
     ngOnInit() {
+        this.patterns = this.patternsService.getAllPatterns();
     }
 
 }
